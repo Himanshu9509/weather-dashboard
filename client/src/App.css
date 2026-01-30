@@ -1,0 +1,458 @@
+/* client/src/App.css */
+
+/* Add these new styles for our chart's container */
+.weather-chart-container {
+  /* Use flexbox to center the title and manage layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Spacing and Dimensions */
+  margin-top: 2rem;
+  padding: 1.5rem;
+
+  /* Visual Styling */
+  background-color: #ffffff; /* A clean white background */
+  border-radius: 0.75rem; /* Rounded corners */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* A subtle shadow */
+  width: 100%; /* Ensure it takes up the full width of its parent in the main layout */
+}
+
+.weather-chart-container h2 {
+  /* Style the chart's title */
+  color: #374151; /* A dark gray for good contrast */
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem; /* Space between the title and the chart */
+}
+/* client/src/App.css */
+
+/* Add these new styles for the authentication pages */
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 80vh; /* Ensure it takes up most of the viewport height */
+}
+
+.auth-form-container {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  width: 100%;
+  max-width: 400px; /* Constrain the form width on larger screens */
+  text-align: center;
+}
+
+.auth-form-container h2 {
+  color: #1f2937;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.auth-form .form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensures padding doesn't affect final width */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 0.2);
+}
+
+.auth-form .btn-submit {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.auth-form .btn-submit:hover {
+  background-color: #2563eb;
+}
+/* client/src/App.css */
+
+/* Add these new styles for the Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.navbar-links a {
+  color: #4b5563;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: #3b82f6;
+}
+/* client/src/App.css */
+
+/* Add this style for the logout button */
+.btn-logout {
+  background: none;
+  border: none;
+  color: #ef4444; /* A shade of red */
+  cursor: pointer;
+  font-family: inherit; /* Inherit font from navbar */
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1.5rem;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.btn-logout:hover {
+  color: #dc2626; /* A darker red on hover */
+}
+/* client/src/App.css */
+
+/* Add these new styles */
+
+.favorites-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-favorite {
+  background-color: #f59e0b; /* A nice amber color */
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  margin-bottom: 0.5rem;
+}
+
+.btn-favorite:hover {
+  background-color: #d97706;
+}
+
+.btn-favorite:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Local, smaller feedback messages */
+.success-message-local {
+  color: #16a34a;
+  font-size: 0.9rem;
+}
+
+.error-message-local {
+  color: #ef4444;
+  font-size: 0.9rem;
+}
+/* client/src/App.css */
+
+/* Add these new styles for the FavoritesList component */
+
+.favorites-list-container {
+  background-color: #f9fafb; /* A very light grey */
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem auto 0;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.favorites-list-container h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #374151;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.no-favorites {
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.favorites-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.favorite-item-clickable {
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #d1d5db;
+  color: #1f2937;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.favorite-item-clickable:hover {
+  background-color: #3b82f6; 
+  color: white;
+  border-color: #2563eb;
+}
+/* client/src/App.css */
+
+/* Add these new styles for the geolocation button and its container */
+
+/* This container will help us align the search form and the new button */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Creates space between the form and the button */
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  margin-bottom: 1rem;
+}
+
+.btn-geolocation {
+  background-color: #10b981; /* A nice green color */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  flex-shrink: 0; /* Prevents the button from shrinking if the container is tight */
+}
+
+.btn-geolocation:hover {
+  background-color: #059669;
+  transform: translateY(-2px); /* A subtle lift effect on hover */
+}
+
+.btn-geolocation:active {
+  transform: translateY(0);
+}
+/* client/src/App.css */
+
+/* Add these new styles for the ToggleSwitch component */
+
+.toggle-switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.toggle-switch-container span {
+  font-weight: 500;
+  color: #4b5563;
+}
+
+/* The switch - a container for our slider */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+/* Hide the default HTML checkbox */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #3b82f6;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #3b82f6;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* client/src/App.css */
+
+/* Add these new styles for our icon containers */
+
+.weather-icon-large {
+  /* The color will be inherited from the parent. We can set it here if we want. */
+  color: #3b82f6;
+  font-size: 8rem; /* Use font-size to control the icon size */
+  line-height: 1; /* Helps with vertical alignment */
+  margin-bottom: 1rem;
+}
+
+.weather-icon-small {
+  color: #4b5563;
+  font-size: 3.5rem; /* A smaller size for the forecast cards */
+  margin-bottom: 0.5rem;
+}
+/* client/src/App.css */
+
+/* ==========================================================================
+   Responsive Media Queries
+   ========================================================================== */
+
+/* Our base CSS is already mobile-first, but let's ensure some key
+   components stack nicely by default. */
+
+.forecast-cards {
+  /* On small screens (our base style), stack the cards vertically. */
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-container {
+  /* Allow the search form and geolocation button to wrap onto a new line if needed. */
+  flex-wrap: wrap;
+}
+
+/* --- Tablet Breakpoint --- */
+/* This media query applies styles when the viewport is 768px or wider. */
+@media (min-width: 768px) {
+  .App header h1 {
+    font-size: 2.5rem; /* Make the main title a bit larger on tablets */
+  }
+
+  .forecast-cards {
+    /* On tablets and larger, display the forecast cards in a row again. */
+    flex-direction: row;
+    justify-content: space-around; /* Spread them out a bit */
+  }
+
+  .forecast-card {
+    /* Give each card a bit more space */
+    padding: 1.5rem;
+  }
+
+  .weather-details {
+    /* Allow the weather details to be in a row for a more classic look */
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .weather-icon-large {
+    margin-bottom: 0; /* Remove bottom margin since it's now side-by-side */
+  }
+}
+
+/* --- Desktop Breakpoint --- */
+/* This media query applies styles when the viewport is 1024px or wider. */
+@media (min-width: 1024px) {
+  .App {
+    /* Increase the max-width of the main container on large screens */
+    max-width: 1100px;
+    margin: 2rem auto;
+  }
+
+  .App header h1 {
+    font-size: 3rem; /* Even larger title for desktops */
+  }
+
+  .weather-icon-large {
+    font-size: 10rem; /* Make the main weather icon bigger */
+  }
+
+  .temperature {
+    font-size: 5rem;
+  }
+
+  .condition {
+    font-size: 2rem;
+  }
+}
+
+/* --- Auth Form Polish for Small Screens --- */
+/* This targets screens smaller than 420px to refine the auth form padding. */
+@media (max-width: 420px) {
+  .auth-form-container {
+    /* Reduce padding on very narrow screens to prevent the form from feeling cramped. */
+    padding: 1.5rem;
+  }
+}
