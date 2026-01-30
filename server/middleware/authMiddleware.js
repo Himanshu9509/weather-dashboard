@@ -2,7 +2,7 @@
 
 // 1. Import the necessary libraries.
 import jwt from 'jsonwebtoken';
-import User from '/models/User.js';
+import User from '../models/user.js';
 
 // 2. Define the 'protect' middleware function. It's an async function as it will interact with the database.
 const protect = async (req, res, next) => {
