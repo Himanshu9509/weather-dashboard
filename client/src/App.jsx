@@ -1,8 +1,10 @@
+console.log("AuthContext:", AuthContext);
 import React from "react";
+import { AuthContext } from './context/AuthContext';
 import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Routes, Route } from 'react-router-dom';
-import { AuthContext } from './context/AuthContext';
+
 import SearchForm from './components/SearchForm';
 import CurrentWeather from './components/CurrentWeather';
 import Forecast from './components/Forecast';
