@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Routes, Route } from 'react-router-dom';
-
+import { AuthContext } from './context/AuthContext';
 import SearchForm from './components/SearchForm';
 import CurrentWeather from './components/CurrentWeather';
 import Forecast from './components/Forecast';
@@ -10,10 +10,9 @@ import WeatherChart from './components/WeatherChart';
 import Navbar from './components/Navbar';
 import FavoritesList from './components/FavoritesList';
 import ToggleSwitch from './components/ToggleSwitch';
-
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import { AuthProvider } from './context/AuthContext';
+
 
 
 
