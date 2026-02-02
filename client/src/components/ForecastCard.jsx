@@ -7,7 +7,7 @@ const dummyForecastData = {
   tempHigh: 19,
   tempLow: 12,
 };
-function ForecastCard({ dayData ,unit }) {
+function ForecastCard({ dayData ,unit,condition }) {
   const { day, icon, tempHigh, tempLow } = dayData;
   const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
   const unitSymbol = unit === 'metric' ? '°C' : '°F';

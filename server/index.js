@@ -136,6 +136,11 @@ if (process.env.NODE_ENV === 'production') {
 /* =======================
    START SERVER
 ======================= */
+// React dev fallback (prevents 404 on refresh)
+app.use((req, res, next) => {
+  if (req.path.startsWith('/api')) return next();
+  res.status(200).send('React dev server handles frontend');
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
